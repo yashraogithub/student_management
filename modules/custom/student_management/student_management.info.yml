@@ -1,0 +1,8 @@
+name: 'Student Management'
+type: module
+description: 'Custom module to manage students.'
+core_version_requirement: ^10
+package: Custom
+version: 1.0
+dependencies:
+  - node

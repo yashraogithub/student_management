@@ -1,0 +1,4 @@
+services:
+  student_management.report_generator:
+    class: 'Drupal\student_management\Service\ReportGenerator'
+    arguments: ['@database', '@logger.factory', '@date.formatter']

@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function student_management_schema() {
+  $schema['student_data'] = [
+    'description' => 'Stores student records for the Student Management module.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key: Unique student ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'Student name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'age' => [
+        'description' => 'Student age.',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'course' => [
+        'description' => 'Course enrolled.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'created' => [
+        'description' => 'Unix timestamp when the record was created.',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

@@ -1,0 +1,13 @@
+student_management.add_student:
+  title: 'Add Student'
+  route_name: student_management.student_form
+  parent: system.admin_content
+  description: 'Add a new student.'
+  weight: 1
+
+student_management.list_student:
+  title: 'Student List'
+  route_name: student_management.student_list
+  parent: system.admin_content
+  description: 'View student list.'
+  weight: 2
